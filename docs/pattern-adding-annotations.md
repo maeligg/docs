@@ -1,9 +1,9 @@
 ---
 layout: docs
 title: Adding Annotations | Pattern Lab
+heading: Adding Annotations
 ---
 
-# Adding Annotations
 
 Annotations provide an easy way to add notes to elements within a pattern and they can be found in `source/_data/annotations.js`. They're _not_ pattern-specific. Rather, they're added to patterns using the same selector syntax you'd use for jQuery or CSS. 
 
@@ -11,11 +11,11 @@ Annotations provide an easy way to add notes to elements within a pattern and th
 
 To explain how annotations are structured here is the annotation that's added to the logo:
 
-```
+```javascript
 {
 	"el": ".logo",
  	"title" : "Logo",
- 	"comment": "<p>The logo image is an SVG file, which ensures that the logo displays crisply even on high resolution displays. A PNG fallback is provided for browsers that don't support SVG images.</p><p>Further reading: <a href=\"http://bradfrostweb.com/blog/mobile/hi-res-optimization/\">Optimizing Web Experiences for High Resolution Screens</a></p>"
+ 	"comment": "The logo image is an SVG file, which ensures that the logo displays crisply even on high resolution displays. A PNG fallback is provided for browsers that don't support SVG images.</p><p>Further reading: <a href=\"http://bradfrostweb.com/blog/mobile/hi-res-optimization/\">Optimizing Web Experiences for High Resolution Screens</a></p>"
 }
 ```
 

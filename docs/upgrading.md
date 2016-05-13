@@ -1,9 +1,17 @@
 ---
 layout: docs
 title: Upgrading Pattern Lab | Pattern Lab
+heading: Upgrading Pattern Lab
+languages:
+- language: php
+- language: node
 ---
 
-# Upgrading Pattern Lab
+<!--- start php -->
+<div class="tab-panel" id="php">
+<h2 class="language-title">php</h2>
+
+{% capture m %}
 
 To upgrade the PHP version of Pattern Lab do the following:
 
@@ -37,3 +45,39 @@ If you want to you can clean-up some of the directories that are left-over after
 * `listeners/`
 * `scripts/`
 * `source/_patternlab-files/`
+
+{% endcapture %}
+{{ m | markdownify }}
+
+</div>
+
+<!--- end php -->
+
+
+
+<!--- start node -->
+
+<div class="tab-panel" id="node">
+<h2 class="language-title">node</h2>
+
+{% capture m %}
+
+To upgrade the Node version of Pattern Lab do the following:
+
+1. **Important:** Make a back-up of `source/` and `config.json` and your `Gruntfile`|`Gulpfile`.
+2. [Download the latest release](https://github.com/pattern-lab/patternlab-node/releases) of the Node version of Pattern Lab, or use `npm update patternlab-node` if you originally [installed](/docs/node/installation.html) Pattern Lab via `npm.`
+3. Restore files in `source/` and `config.json` if needed.
+4. Be mindful of whether you need to merge any customizations to `config.json` or your `Gruntfile`|`Gulpfile`
+
+If you encounter trouble - make sure your npm devDependencies are up to date. Assuming you have the latest `package.json` file, you can delete the contents of `./node_modules` and run `npm cache clear` before running `npm install` to pull down everything anew.
+
+## Addenda
+
+Some releases require a little extra file rearranging or reconfiguration. Please check the [addenda](https://github.com/pattern-lab/patternlab-node/wiki/Upgrading) on the wiki for more info.
+
+{% endcapture %}
+{{ m | markdownify }}
+
+</div>
+
+<!--- end node -->
